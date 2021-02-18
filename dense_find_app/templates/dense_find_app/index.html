@@ -7,5 +7,25 @@
     map
 </div>
 
+<div class="searchbar">
+    <p>put 35.6467139,139.707889 for test</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" name="search" value="search"　id="test">
+    </form>
+</div>
+
+<div>
+    {% if tweets_list != "error" %}
+        {% for tweet in  tweets_list  %}
+            <p>{{ tweet.full_text}} </p>
+            <p>---------</p>
+        {% endfor %}
+    {% else %}
+        <p>{{ tweets_list }}r</p>
+    {% endif %}
+    
+</div>
 {% endblock %}
 
