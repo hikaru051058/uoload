@@ -57,7 +57,7 @@ class NagoyaView(TemplateView):
     template_name = "dense_find_app/nagoya.html" 
         
 class ShibuyaView(TemplateView):
-    template_name = "dense_find_app/shibuya.html" 
+    template_name = "dense_find_app/hideo.html" 
 
 
         
