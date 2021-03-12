@@ -1,0 +1,40 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <header>
+        <link rel="stylesheet" href="{% static "index.css" %}">
+        <title>
+            Twidense
+        </title>
+</head>
+<body>
+    <header>
+            <div class="header-inner" >
+                TWIDENSE
+            </div>
+    </header>
+    <div class="main-content">
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href='/ebisu'>Ebisu</a></li>
+                    <li><a href='/nagoya'>Nagoya</a></li>
+                    <li><a href='/shibuya'>Shibuya</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            Prediction
+            <img border="0" src="{% static "shibuya_graph.png" %}" width="400" height="300">
+        </main>
+        <div class= "graph">
+            Tweets locations
+            <div class="iframe">
+                <iframe src="{% static "shibuya_map.html" %}" width="400" height="300"></iframe>
+            </div>
+        </div>
+
+    </div>
+    </body>
+</html>

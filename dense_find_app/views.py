@@ -20,6 +20,9 @@ auth.set_access_token(ACCESS_TOKEN,ACCESS_SECERET)
 api = tweepy.API(auth)
 #-----------------------
 
+#-----------------------------
+
+
 # Create your views here.
 
 class HomeView(FormView):
@@ -46,8 +49,15 @@ class HomeView(FormView):
         else:
             ctxt = self.get_context_data(tweets_list="error", form=form)
             return self.render_to_response(ctxt)
+            
+class TokyoView(TemplateView):
+    template_name = "dense_find_app/tokyo.html" 
         
+class NagoyaView(TemplateView):
+    template_name = "dense_find_app/nagoya.html" 
         
+class ShibuyaView(TemplateView):
+    template_name = "dense_find_app/shibuya.html" 
 
 
         
